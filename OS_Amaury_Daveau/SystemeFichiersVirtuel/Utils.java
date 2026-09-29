@@ -60,7 +60,6 @@ public class Utils {
 			String str,
 			int maxLength) {
 
-		// TODO:
 		int parcours = 0;
 		byte[] tableByte = str.getBytes();
 		while (parcours <= maxLength) {
@@ -80,10 +79,6 @@ public class Utils {
 			int offset,
 			int maxLength) {
 
-		// TODO:
-		// Lire jusqu'au premier octet nul
-		// ou jusqu'à maxLength.
-
-		return "";
+		return String(memory,offset,maxLength);
 	}
 }
