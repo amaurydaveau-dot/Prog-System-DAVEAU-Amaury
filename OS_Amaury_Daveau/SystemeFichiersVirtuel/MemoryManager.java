@@ -121,12 +121,20 @@ public class MemoryManager {
 	public int allocateBlock() {
 
 		// TODO:
+		int parcours = 0;
+		while(parcours<NUM_BLOCKS) {
+			if(isBlockUsed(parcours) == 0) {
+				setBlockUsed(parcours,true)
+				return parcours;
+			} else {
+				parcours++
+			}
+		}
+		return -1;
 		// Parcourir les blocs de données :
 		// 129 .. NUM_BLOCKS - 1.
 		//
 		// Retourner le premier bloc libre.
-		// Le marquer immédiatement comme utilisé.
-
-		return -1;
+		// Le marquer immédiatement comme utilisé.	
 	}
 }
